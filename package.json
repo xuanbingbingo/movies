@@ -25,6 +25,8 @@
   "homepage": "https://github.com/xuanbingbingo/movies#readme",
   "dependencies": {
     "ejs": "^2.6.1",
-    "koa": "^2.5.2"
+    "koa": "^2.5.2",
+    "koa-views": "^6.1.4",
+    "pug": "^2.0.3"
   }
 }
