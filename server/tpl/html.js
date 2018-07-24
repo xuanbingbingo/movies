@@ -12,8 +12,8 @@ module.exports = `
     <body>
       <div class='container'>
         <div class='row'>
-          <div class='col-md-4'></div>
-          <div class='col-md-8'>静态页面</div>
+          <div class='col-md-4'>hi bingo</div>
+          <div class='col-md-8'>这是静态页面</div>
         </div>
       </div>
     </body>
