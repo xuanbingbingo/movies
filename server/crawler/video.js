@@ -30,7 +30,7 @@ const sleep = time => new Promise(resolve=>{
 
     if(it && it.length > 0){
       var link = it.attr('href')
-      var cover = it.attr('style').replace('background-image:url(','').replace('?)','')
+      var cover = it.attr('style').match(/https(\S*)jpg/g)[0]
 
       return {
         link,
