@@ -38,11 +38,11 @@ const userSchema = new Schema({
     }
   }
 })
-userSchema.virtual('isLocked').get(()=>{
+userSchema.virtual('isLocked').get(function(){
   return !!(this.lockUntil && this.lockUntil > Date.now())
 })
 //保存之前更新一下创建时间和更新时间
-userSchema.pre('save', next => {
+userSchema.pre('save', function(next) {
   if (this.isNew) {
     this.meta.createdAt = this.meta.updateAt = Date.now()
   } else{
@@ -51,7 +51,7 @@ userSchema.pre('save', next => {
   next()
 })
 
-userSchema.pre('save', next => {
+userSchema.pre('save', function(next) {
   if(!this.isModified('password')) return next()
 
   bcrypt.gensalt(SALT_WORK_FACTOR, (err, salt) => {
